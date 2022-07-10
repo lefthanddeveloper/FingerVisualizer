@@ -71,12 +71,12 @@ namespace FingerVisualizer
             if(curFreq > buffer)
 			{
                 buffer = curFreq;
-				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 20f);
+				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 15f);
 			}
 			else
 			{
 
-				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 50f);
+				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 25f);
             }
 
             handAnim.SetFloat(FingerAnimParam, Mathf.Clamp01(buffer * indivisualMultiplier ));
