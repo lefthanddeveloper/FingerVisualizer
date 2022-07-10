@@ -326,8 +326,9 @@ GameObject:
   - component: {fileID: 542775872}
   - component: {fileID: 542775871}
   - component: {fileID: 542775870}
+  - component: {fileID: 542775873}
   m_Layer: 0
-  m_Name: StylizedHand-R
+  m_Name: StylizedHand-L
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -340,7 +341,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 542775869}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a3ac2cc4943eaf439bd263f264cff94, type: 3}
   m_Name: 
@@ -383,6 +384,51 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
+--- !u!114 &542775873
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 542775869}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd91955386b0434eb3b7477a740158a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasapiAudioSource: {fileID: 702619470}
+  scalingStrategy: 2
+  windowFunctionType: 5
+  minFreq: 0
+  maxFreq: 20000
+  multiplier: 0.5
+  fingers:
+  - fingerType: 4
+    targetFreq: 0
+    indivisualMultiplier: 1
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  - fingerType: 3
+    targetFreq: 1
+    indivisualMultiplier: 1
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  - fingerType: 2
+    targetFreq: 2
+    indivisualMultiplier: 1
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  - fingerType: 1
+    targetFreq: 3
+    indivisualMultiplier: 1
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  - fingerType: 0
+    targetFreq: 4
+    indivisualMultiplier: 1
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  anim: {fileID: 542775871}
 --- !u!1 &561471844
 GameObject:
   m_ObjectHideFlags: 0
@@ -544,6 +590,51 @@ Transform:
   m_Children: []
   m_Father: {fileID: 1032805186}
   m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &702619469
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 702619471}
+  - component: {fileID: 702619470}
+  m_Layer: 0
+  m_Name: WasapiAudioSource
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &702619470
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702619469}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f0e64b616e469e64c819f821492cf810, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  captureType: 0
+--- !u!4 &702619471
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 702619469}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 2
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &708113143
 GameObject:
@@ -711,7 +802,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 919132148268867844}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4a3ac2cc4943eaf439bd263f264cff94, type: 3}
   m_Name: 
@@ -974,7 +1065,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1463455391}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 1, z: -1.5}
+  m_LocalPosition: {x: 0, y: 1, z: -1.73}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1373,7 +1464,7 @@ Transform:
   - {fileID: 8879528567708232480}
   - {fileID: 7967766327104808885}
   m_Father: {fileID: 0}
-  m_RootOrder: 2
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 90, y: 0, z: 0}
 --- !u!1 &919132148268867844
 GameObject:
@@ -1386,8 +1477,9 @@ GameObject:
   - component: {fileID: 543450652471557054}
   - component: {fileID: 5866666020654588356}
   - component: {fileID: 1261968472}
+  - component: {fileID: 5866666020654588357}
   m_Layer: 0
-  m_Name: StylizedHand-L
+  m_Name: StylizedHand-R
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1766,6 +1858,51 @@ Animator:
   m_HasTransformHierarchy: 1
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!114 &5866666020654588357
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 919132148268867844}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1fd91955386b0434eb3b7477a740158a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  wasapiAudioSource: {fileID: 702619470}
+  scalingStrategy: 2
+  windowFunctionType: 5
+  minFreq: 0
+  maxFreq: 20000
+  multiplier: 0.5
+  fingers:
+  - fingerType: 0
+    targetFreq: 5
+    indivisualMultiplier: 1
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  - fingerType: 1
+    targetFreq: 6
+    indivisualMultiplier: 1
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  - fingerType: 2
+    targetFreq: 7
+    indivisualMultiplier: 1
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  - fingerType: 3
+    targetFreq: 8
+    indivisualMultiplier: 1
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  - fingerType: 4
+    targetFreq: 9
+    indivisualMultiplier: 3
+    bufferDecreaseAmount: 0.005
+    bufferDecraseMultiplier: 1.2
+  anim: {fileID: 5866666020654588356}
 --- !u!1 &6103902086496930745
 GameObject:
   m_ObjectHideFlags: 0
