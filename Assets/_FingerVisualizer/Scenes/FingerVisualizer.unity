@@ -401,7 +401,7 @@ MonoBehaviour:
   windowFunctionType: 5
   minFreq: 0
   maxFreq: 20000
-  multiplier: 0.5
+  multiplier: 0.2
   fingers:
   - fingerType: 4
     targetFreq: 0
@@ -1875,7 +1875,7 @@ MonoBehaviour:
   windowFunctionType: 5
   minFreq: 0
   maxFreq: 20000
-  multiplier: 0.5
+  multiplier: 0.2
   fingers:
   - fingerType: 0
     targetFreq: 5

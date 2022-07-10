@@ -30,10 +30,9 @@ namespace FingerVisualizer
 
         private IVisualizer visualizer;
         private Animator handAnim;
-        private float bufferDecrease =0f;
 
         private float buffer;
-
+        private float smoothVel = 0f;
         public void Init(Animator anim, IVisualizer visualizer)
 		{
             this.visualizer = visualizer;
@@ -72,14 +71,13 @@ namespace FingerVisualizer
             if(curFreq > buffer)
 			{
                 buffer = curFreq;
-                bufferDecrease = bufferDecreaseAmount;
+				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 20f);
 			}
 			else
 			{
 
-                buffer -= bufferDecrease;
-                bufferDecrease *= bufferDecraseMultiplier;
-			}
+				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 50f);
+            }
 
             handAnim.SetFloat(FingerAnimParam, Mathf.Clamp01(buffer * indivisualMultiplier ));
 		}
