@@ -35,7 +35,7 @@ namespace FingerVisualizer
         [SerializeField] private WindowFunctionType windowFunctionType = WindowFunctionType.BlackmannHarris;
         [SerializeField] private int minFreq = 0;
         [SerializeField] private int maxFreq = 20000;
-        [SerializeField] private float multiplier = 10f;
+        [SerializeField] private float multiplier = 1f;
 
 
         private float[] rawSpectrumData;
