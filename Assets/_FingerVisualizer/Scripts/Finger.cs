@@ -81,6 +81,11 @@ namespace FingerVisualizer
 
             handAnim.SetFloat(FingerAnimParam, Mathf.Clamp01(buffer * indivisualMultiplier ));
 		}
+
+        public void ChangeTargetFreq(TargetFrequency newFreq)
+		{
+            targetFreq = newFreq;
+		}
 	}
 
 
