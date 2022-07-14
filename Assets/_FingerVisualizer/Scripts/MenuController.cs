@@ -22,7 +22,7 @@ namespace FingerVisualizer
 		{
             menuButton.Init(OnClickMenuButton);
             menuDropdown.Init();
-            foreach (var menu in menus) menu.Init(null);
+            foreach (var menu in menus) menu.Init();
 		}
 
         private void OnClickMenuButton()
@@ -35,7 +35,8 @@ namespace FingerVisualizer
                 for(int i=0; i< menus.Length; i++)
 				{
                     menus[i].OnCondense(expandTime * 1.5f);
-				}
+                    menus[i].HidePanel();
+                }
 			}
 			else
 			{
@@ -43,12 +44,26 @@ namespace FingerVisualizer
                 for (int i = 0; i < menus.Length; i++)
                 {
                     menus[i].OnExpand(expandTime * 1.5f);
+                    
                 }
             }
 
 		}
 
-
+        public void OnMenuSelected(Menu selectedMenu)
+		{
+            for(int i=0; i< menus.Length; i++)
+			{
+                if(menus[i] == selectedMenu)
+				{
+                    menus[i].ShowPanel();
+				}
+				else
+				{
+                    menus[i].HidePanel();
+				}
+			}
+		}
 
     }
 
