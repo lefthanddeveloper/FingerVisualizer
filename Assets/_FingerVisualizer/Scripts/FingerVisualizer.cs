@@ -29,6 +29,19 @@ namespace FingerVisualizer
 				fingers[i].ProcessAnimation();
 			}
         }
+
+		public Finger GetFinger(FingerType fingerType)
+		{
+			for(int i=0; i< fingers.Length; i++)
+			{
+				if(fingers[i].fingerType == fingerType)
+				{
+					return fingers[i];
+				}
+			}
+
+			return null;
+		}
     }
 
 }

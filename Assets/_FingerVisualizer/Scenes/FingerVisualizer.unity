@@ -155,6 +155,39 @@ Transform:
   m_Father: {fileID: 606094284}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: -80.277, y: -33.158, z: 33.539}
+--- !u!1 &41641476
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 41641477}
+  m_Layer: 0
+  m_Name: Menus
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &41641477
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 41641476}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children:
+  - {fileID: 1779674711}
+  - {fileID: 1058151956}
+  m_Father: {fileID: 43299862}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &43299861
 GameObject:
   m_ObjectHideFlags: 0
@@ -184,6 +217,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
+  - {fileID: 41641477}
   - {fileID: 1765131810}
   m_Father: {fileID: 0}
   m_RootOrder: 6
@@ -252,8 +286,8 @@ MonoBehaviour:
     backgroundImage: {fileID: 1154680377}
     backgroundExpandHeight: 500
   menus:
-  - {fileID: 1411004692}
-  - {fileID: 524793734}
+  - {fileID: 1779674712}
+  - {fileID: 1058151957}
 --- !u!1001 &75117166
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1030,7 +1064,6 @@ GameObject:
   - component: {fileID: 524793738}
   - component: {fileID: 524793735}
   - component: {fileID: 524793737}
-  - component: {fileID: 524793734}
   m_Layer: 5
   m_Name: Button_Info
   m_TagString: Untagged
@@ -1038,24 +1071,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &524793734
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 524793733}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d682c5389612dd7408e10336c97db7af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventCaller: {fileID: 524793737}
-  panel: {fileID: 739535793}
-  buttonImage: {fileID: 1002991987}
-  destPosY: -425
-  defaultColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
-  hoverColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &524793735
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1228,27 +1243,22 @@ MonoBehaviour:
     targetFreq: 0
     indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   - fingerType: 3
     targetFreq: 1
     indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   - fingerType: 2
     targetFreq: 2
     indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   - fingerType: 1
     targetFreq: 3
     indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   - fingerType: 0
     targetFreq: 4
     indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   anim: {fileID: 542775871}
 --- !u!1 &551546590
 GameObject:
@@ -2247,6 +2257,56 @@ RectTransform:
   m_CorrespondingSourceObject: {fileID: 6177279645096844612, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
   m_PrefabInstance: {fileID: 1047933365}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &1058151955
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1058151956}
+  - component: {fileID: 1058151957}
+  m_Layer: 0
+  m_Name: Info
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1058151956
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058151955}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 41641477}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1058151957
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1058151955}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d682c5389612dd7408e10336c97db7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventCaller: {fileID: 524793737}
+  panel: {fileID: 739535793}
+  buttonImage: {fileID: 1002991987}
+  destPosY: -425
+  defaultColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
+  hoverColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1088162326
 GameObject:
   m_ObjectHideFlags: 0
@@ -2981,7 +3041,6 @@ GameObject:
   - component: {fileID: 1411004691}
   - component: {fileID: 1411004690}
   - component: {fileID: 1411004689}
-  - component: {fileID: 1411004692}
   m_Layer: 5
   m_Name: Button_FingerSetting
   m_TagString: Untagged
@@ -3069,24 +3128,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1411004687}
   m_CullTransparentMesh: 1
---- !u!114 &1411004692
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1411004687}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d682c5389612dd7408e10336c97db7af, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  eventCaller: {fileID: 1411004689}
-  panel: {fileID: 588853930}
-  buttonImage: {fileID: 2040998781}
-  destPosY: -225
-  defaultColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
-  hoverColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1413835856
 GameObject:
   m_ObjectHideFlags: 0
@@ -3808,7 +3849,7 @@ GameObject:
   - component: {fileID: 1765131808}
   - component: {fileID: 1765131807}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: ViewCanvas
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -3890,13 +3931,63 @@ RectTransform:
   - {fileID: 140167742}
   - {fileID: 276897736}
   m_Father: {fileID: 43299862}
-  m_RootOrder: 0
+  m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!1 &1779674710
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1779674711}
+  - component: {fileID: 1779674712}
+  m_Layer: 0
+  m_Name: FingerSettings
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1779674711
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779674710}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 41641477}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1779674712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1779674710}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d682c5389612dd7408e10336c97db7af, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  eventCaller: {fileID: 1411004689}
+  panel: {fileID: 588853930}
+  buttonImage: {fileID: 2040998781}
+  destPosY: -225
+  defaultColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
+  hoverColor: {r: 1, g: 1, b: 1, a: 1}
 --- !u!1 &1800250262
 GameObject:
   m_ObjectHideFlags: 0
@@ -4874,27 +4965,22 @@ MonoBehaviour:
     targetFreq: 5
     indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   - fingerType: 1
     targetFreq: 6
     indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   - fingerType: 2
     targetFreq: 7
     indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   - fingerType: 3
     targetFreq: 8
     indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   - fingerType: 4
     targetFreq: 9
     indivisualMultiplier: 3
     bufferDecreaseAmount: 0.005
-    bufferDecraseMultiplier: 1.2
   anim: {fileID: 5866666020654588356}
 --- !u!1 &6103902086496930745
 GameObject:

@@ -24,7 +24,6 @@ namespace FingerVisualizer
         public TargetFrequency targetFreq;
         public float indivisualMultiplier = 1f;
         public float bufferDecreaseAmount = 0.005f;
-        public float bufferDecraseMultiplier = 1.2f;
 
         public string FingerAnimParam { get; private set; }
 
