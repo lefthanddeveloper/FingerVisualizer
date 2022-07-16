@@ -626,6 +626,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3845734770948234481, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
+      propertyPath: fingerType
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 6177279644162172387, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_SizeDelta.y
       value: 930.9091
@@ -868,6 +872,10 @@ PrefabInstance:
     - target: {fileID: 3808578898215773449, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845734770948234481, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
+      propertyPath: fingerType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6177279644162172387, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_SizeDelta.x
@@ -1780,6 +1788,10 @@ PrefabInstance:
       propertyPath: m_AnchorMin.x
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 3845734770948234481, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
+      propertyPath: fingerType
+      value: 4
+      objectReference: {fileID: 0}
     - target: {fileID: 6177279644162172387, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_SizeDelta.x
       value: 198
@@ -2047,6 +2059,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1032511824}
+  - component: {fileID: 1032511825}
   m_Layer: 5
   m_Name: HandR
   m_TagString: Untagged
@@ -2079,6 +2092,19 @@ RectTransform:
   m_AnchoredPosition: {x: 20, y: 200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1032511825
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1032511823}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7675ff5568bfd4ea2bf0999319e9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingerVisualizer: {fileID: 5866666020654588357}
 --- !u!1 &1032805185
 GameObject:
   m_ObjectHideFlags: 0
@@ -2137,6 +2163,10 @@ PrefabInstance:
     - target: {fileID: 3808578898215773449, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845734770948234481, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
+      propertyPath: fingerType
+      value: 4
       objectReference: {fileID: 0}
     - target: {fileID: 6177279644162172387, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2298,7 +2328,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1058151955}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: d682c5389612dd7408e10336c97db7af, type: 3}
+  m_Script: {fileID: 11500000, guid: c042e4e53682f30419eab5a0bc900f6d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   eventCaller: {fileID: 524793737}
@@ -2508,6 +2538,10 @@ PrefabInstance:
     - target: {fileID: 3808578898215773449, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845734770948234481, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
+      propertyPath: fingerType
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6177279644162172387, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_SizeDelta.x
@@ -2731,6 +2765,10 @@ PrefabInstance:
     - target: {fileID: 3808578898215773449, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845734770948234481, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
+      propertyPath: fingerType
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 6177279644162172387, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_SizeDelta.y
@@ -3287,6 +3325,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1482323229}
+  - component: {fileID: 1482323230}
   m_Layer: 5
   m_Name: HandL
   m_TagString: Untagged
@@ -3319,6 +3358,19 @@ RectTransform:
   m_AnchoredPosition: {x: -20, y: 200}
   m_SizeDelta: {x: 100, y: 100}
   m_Pivot: {x: 0.5, y: 0}
+--- !u!114 &1482323230
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1482323228}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6b7675ff5568bfd4ea2bf0999319e9e4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fingerVisualizer: {fileID: 542775873}
 --- !u!1 &1495724583
 GameObject:
   m_ObjectHideFlags: 0
@@ -3550,6 +3602,10 @@ PrefabInstance:
     - target: {fileID: 3808578898215773449, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845734770948234481, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
+      propertyPath: fingerType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6177279644162172387, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_SizeDelta.x
@@ -3988,6 +4044,8 @@ MonoBehaviour:
   destPosY: -225
   defaultColor: {r: 0.27450982, g: 0.27450982, b: 0.27450982, a: 1}
   hoverColor: {r: 1, g: 1, b: 1, a: 1}
+  leftHandUI: {fileID: 1482323230}
+  rightHandUI: {fileID: 1032511825}
 --- !u!1 &1800250262
 GameObject:
   m_ObjectHideFlags: 0
@@ -4051,6 +4109,10 @@ PrefabInstance:
     - target: {fileID: 3808578898215773449, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_AnchorMin.x
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3845734770948234481, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
+      propertyPath: fingerType
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6177279644162172387, guid: a3286e3627e3b204cbe0c4aba0bf9512, type: 3}
       propertyPath: m_SizeDelta.x
@@ -4979,7 +5041,7 @@ MonoBehaviour:
     bufferDecreaseAmount: 0.005
   - fingerType: 4
     targetFreq: 9
-    indivisualMultiplier: 3
+    indivisualMultiplier: 1
     bufferDecreaseAmount: 0.005
   anim: {fileID: 5866666020654588356}
 --- !u!1 &6103902086496930745

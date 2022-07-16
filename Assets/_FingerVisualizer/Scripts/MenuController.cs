@@ -56,7 +56,7 @@ namespace FingerVisualizer
 			{
                 if(menus[i] == selectedMenu)
 				{
-                    menus[i].ShowPanel();
+                    menus[i].OnSelected();
 				}
 				else
 				{

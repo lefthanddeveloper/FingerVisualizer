@@ -78,9 +78,16 @@ namespace FingerVisualizer
 			moveCoroutine = null;
 		}
 
-		public void ShowPanel()
+		public void OnSelected()
 		{
-			panel.SetActive(true);
+			if (panel.activeSelf)
+			{
+				HidePanel();
+			}
+			else
+			{
+				panel.SetActive(true);
+			}
 		}
 
 		public void HidePanel()

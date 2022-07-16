@@ -77,13 +77,18 @@ namespace FingerVisualizer
 
 				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 25f);
             }
+            buffer = Mathf.Clamp01(buffer * indivisualMultiplier);
 
-            handAnim.SetFloat(FingerAnimParam, Mathf.Clamp01(buffer * indivisualMultiplier ));
+            handAnim.SetFloat(FingerAnimParam, buffer);
 		}
 
         public void ChangeTargetFreq(TargetFrequency newFreq)
 		{
             targetFreq = newFreq;
+		}
+        public float GetCurrentBuffer()
+		{
+            return buffer;
 		}
 	}
 
