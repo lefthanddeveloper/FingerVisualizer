@@ -1,49 +1,63 @@
 ﻿using System;
 using System.Collections;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using UnityEngine;
 using UnityEngine.UI;
 
 namespace FingerVisualizer
 {
 	[Serializable]
-	class Menu
+	public class Menu : MonoBehaviour
 	{
 		[SerializeField] private ButtonEventCaller eventCaller;
+		[SerializeField] private GameObject panel;
 		[SerializeField] private Image buttonImage;
-
 		[SerializeField] private float destPosY;
-
 		[SerializeField] private Color defaultColor = Color.white;
 		[SerializeField] private Color hoverColor = Color.white;
 
+		private MenuController menuController;
 		private float originalPosY;
 		private RectTransform rectTr;
 		private Coroutine moveCoroutine = null;
-		public void Init(Action onClickEvent)
+		public virtual void Init()
 		{
+			menuController = GetComponentInParent<MenuController>();
+
 			rectTr = eventCaller.GetComponent<RectTransform>();
 			originalPosY = rectTr.anchoredPosition3D.y;
 
-			eventCaller.onClick.AddListener(()=>onClickEvent?.Invoke());
+			eventCaller.onClick.AddListener(OnClick);
+			eventCaller.onPointerEnter.AddListener(OnPointerEnter);
+			eventCaller.onPointerExit.AddListener(OnPointerExit);
 
-			eventCaller.onPointerEnter.AddListener(() => buttonImage.color = hoverColor);
-			eventCaller.onPointerExit.AddListener(() => buttonImage.color = defaultColor);
+			HidePanel();
+		}
+
+		protected virtual void OnPointerEnter()
+		{
+			buttonImage.color = hoverColor;
+		}
+
+		protected virtual void OnPointerExit()
+		{
+			buttonImage.color = defaultColor;
+		}
+
+		protected virtual void OnClick()
+		{
+			menuController.OnMenuSelected(this);
 		}
 
 		public void OnExpand(float time)
 		{
-			if (moveCoroutine != null) eventCaller.StopCoroutine(moveCoroutine);
-			moveCoroutine = eventCaller.StartCoroutine(MoveCoroutine(time, destPosY));
+			if (moveCoroutine != null) StopCoroutine(moveCoroutine);
+			moveCoroutine = StartCoroutine(MoveCoroutine(time, destPosY));
 		}
 
 		public void OnCondense(float time)
 		{
-			if (moveCoroutine != null) eventCaller.StopCoroutine(moveCoroutine);
-			moveCoroutine = eventCaller.StartCoroutine(MoveCoroutine(time, originalPosY));
+			if (moveCoroutine != null) StopCoroutine(moveCoroutine);
+			moveCoroutine = StartCoroutine(MoveCoroutine(time, originalPosY));
 		}
 
 		private IEnumerator MoveCoroutine(float time, float yPos)
@@ -62,6 +76,23 @@ namespace FingerVisualizer
 			}
 			rectTr.anchoredPosition3D = new Vector3(rectTr.anchoredPosition3D.x, yPos, rectTr.anchoredPosition3D.z);
 			moveCoroutine = null;
+		}
+
+		public void OnSelected()
+		{
+			if (panel.activeSelf)
+			{
+				HidePanel();
+			}
+			else
+			{
+				panel.SetActive(true);
+			}
+		}
+
+		public void HidePanel()
+		{
+			panel.SetActive(false);
 		}
 	}
 }

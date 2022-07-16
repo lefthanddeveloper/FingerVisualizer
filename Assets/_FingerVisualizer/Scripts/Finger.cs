@@ -24,7 +24,6 @@ namespace FingerVisualizer
         public TargetFrequency targetFreq;
         public float indivisualMultiplier = 1f;
         public float bufferDecreaseAmount = 0.005f;
-        public float bufferDecraseMultiplier = 1.2f;
 
         public string FingerAnimParam { get; private set; }
 
@@ -78,13 +77,18 @@ namespace FingerVisualizer
 
 				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 25f);
             }
+            buffer = Mathf.Clamp01(buffer * indivisualMultiplier);
 
-            handAnim.SetFloat(FingerAnimParam, Mathf.Clamp01(buffer * indivisualMultiplier ));
+            handAnim.SetFloat(FingerAnimParam, buffer);
 		}
 
         public void ChangeTargetFreq(TargetFrequency newFreq)
 		{
             targetFreq = newFreq;
+		}
+        public float GetCurrentBuffer()
+		{
+            return buffer;
 		}
 	}
 
