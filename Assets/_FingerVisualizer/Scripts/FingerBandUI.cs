@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using TMPro;
@@ -14,26 +15,41 @@ namespace FingerVisualizer
 
         [SerializeField] private TMP_Dropdown freqDropDown;
         [SerializeField] private Slider intensitySlider;
+        [SerializeField] private AnimationCurve intensityConverter;
+
+        private Finger finger;
+        private int originalFingerIndex;
+        private float originalIntensity;
+
 
         public FingerType FingerType => fingerType;
-
-        
-        
-        
-        
-        private Finger finger;
         
         public void Init(Finger finger)
 		{
             this.finger = finger;
 
-            InitFreqDropdown((int)finger.targetFreq);
+            originalFingerIndex = (int)finger.targetFreq;
+            originalIntensity = intensitySlider.value;
+
+            InitFreqDropdown(originalFingerIndex);
+
+            InitIntensitySlider();
 		}
 
-        
-        void LateUpdate()
+		private void InitIntensitySlider()
+		{
+            intensitySlider.onValueChanged.AddListener((newValue) =>
+            {
+                //newValue = intensityConverter.Evaluate(newValue);
+                float newIntensity = Mathf.Pow(newValue, 2f);
+                finger.ChangeIntensity(newIntensity);
+            });
+		}
+
+		
+		void Update()
         {
-            float fillHeight = fingerImgTr.sizeDelta.y * finger.GetCurrentBuffer();
+            float fillHeight = fingerImgTr.sizeDelta.y * finger.GetCurrentFingerVisualValue();
             fillImgTr.sizeDelta = new Vector2(fillImgTr.sizeDelta.x, fillHeight);
         }
 
@@ -45,11 +61,20 @@ namespace FingerVisualizer
 
         private void OnFreqDropDownChanged(int index)
 		{
+            print("OnFreqDropDOwnChanged called!");
             TargetFrequency newFreq = (TargetFrequency)index;
             finger.ChangeTargetFreq(newFreq);
 		}
 
-        
+        public void OnResetFreq()
+		{
+            freqDropDown.value = originalFingerIndex;
+        }
+
+        public void OnResetIntensity()
+		{
+            intensitySlider.value = originalIntensity;
+		}
     }
 }
 
