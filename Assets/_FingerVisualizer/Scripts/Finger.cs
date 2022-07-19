@@ -23,14 +23,15 @@ namespace FingerVisualizer
         public FingerType fingerType;
         public TargetFrequency targetFreq;
         public float indivisualMultiplier = 1f;
-        public float bufferDecreaseAmount = 0.005f;
+        //public float bufferDecreaseAmount = 0.005f;
 
         public string FingerAnimParam { get; private set; }
 
         private IVisualizer visualizer;
         private Animator handAnim;
 
-        private float buffer;
+        //public float fingerVisualValue { get; private set; }
+        public float buffer;
         private float smoothVel = 0f;
         public void Init(Animator anim, IVisualizer visualizer)
 		{
@@ -66,19 +67,18 @@ namespace FingerVisualizer
         }
         public void ProcessAnimation()
 		{
-            float curFreq = visualizer.GetFrequencyBand(targetFreq);
+            float curFreq = visualizer.GetFrequencyBand(targetFreq) * indivisualMultiplier;
+            
             if(curFreq > buffer)
 			{
-                buffer = curFreq;
-				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 15f);
+                buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 15f);
 			}
 			else
 			{
+                buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 25f);
+			}
 
-				buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 25f);
-            }
-            buffer = Mathf.Clamp01(buffer * indivisualMultiplier);
-
+            buffer = Mathf.Clamp01(buffer);
             handAnim.SetFloat(FingerAnimParam, buffer);
 		}
 
@@ -86,9 +86,14 @@ namespace FingerVisualizer
 		{
             targetFreq = newFreq;
 		}
-        public float GetCurrentBuffer()
+        public float GetCurrentFingerVisualValue()
 		{
             return buffer;
+		}
+
+        public void ChangeIntensity(float newIntensity)
+		{
+            indivisualMultiplier = newIntensity;
 		}
 	}
 

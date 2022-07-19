@@ -19,6 +19,23 @@ namespace FingerVisualizer
                 fingerBands[i].Init(theFinger);
 			}
         }
+
+        public void OnClickResetFreq()
+		{
+            foreach(var ui in fingerBands)
+			{
+                ui.OnResetFreq();
+			}
+		}
+
+        public void OnClickResetIntensity()
+		{
+            foreach(var ui in fingerBands)
+			{
+                ui.OnResetIntensity();
+			}
+		}
+
     }
 
 }

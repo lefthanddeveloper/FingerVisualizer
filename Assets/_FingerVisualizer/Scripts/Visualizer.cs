@@ -137,7 +137,7 @@ namespace FingerVisualizer
                 int sampleCount = numOfSampleForBand[i];
                 for(int j =0; j< sampleCount; j++)
 				{
-                    average += rawSpectrumData[overallCount] * (overallCount+1);
+                    average += rawSpectrumData[overallCount] * (overallCount + 1);
                     overallCount++;
 				}
 
