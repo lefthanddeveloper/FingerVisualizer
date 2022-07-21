@@ -35,8 +35,8 @@ namespace FingerVisualizer
         [SerializeField] private WindowFunctionType windowFunctionType = WindowFunctionType.BlackmannHarris;
         [SerializeField] private int minFreq = 0;
         [SerializeField] private int maxFreq = 20000;
-        [SerializeField] private float multiplier = 1f;
-
+        [SerializeField] private float multiplier = 0.2f;
+        public float IntensityMultiplier => multiplier;
 
         private float[] rawSpectrumData;
         private float[] frequencyBands;
@@ -53,7 +53,6 @@ namespace FingerVisualizer
                 Debug.LogError("WasapiAudioSource needed!");
                 return;
 			}
-
             frequencyBands = new float[numOfBand];
 
             FindNumberofSamplesForEachBand();
@@ -150,6 +149,12 @@ namespace FingerVisualizer
 		{
             return frequencyBands[(int)targetFreq];
 		}
+
+        public void ChangeOverallMultiplier(float newMultiplier)
+        {
+            multiplier = newMultiplier;
+        }
+
     }
 
 }

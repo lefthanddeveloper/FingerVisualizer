@@ -36,6 +36,13 @@ namespace FingerVisualizer
 			}
 		}
 
+        public void ChangeOverallIntensity(float newValue)
+        {
+            fingerVisualizer.ChangeOverallMultiplier(newValue);
+        }
+
+        
+
     }
 
 }

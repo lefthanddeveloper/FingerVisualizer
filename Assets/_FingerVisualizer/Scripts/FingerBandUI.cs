@@ -47,7 +47,7 @@ namespace FingerVisualizer
 		}
 
 		
-		void Update()
+		void LateUpdate()
         {
             float fillHeight = fingerImgTr.sizeDelta.y * finger.GetCurrentFingerVisualValue();
             fillImgTr.sizeDelta = new Vector2(fillImgTr.sizeDelta.x, fillHeight);

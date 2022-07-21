@@ -9,7 +9,7 @@ namespace FingerVisualizer
 	public class Menu : MonoBehaviour
 	{
 		[SerializeField] private ButtonEventCaller eventCaller;
-		[SerializeField] private GameObject panel;
+		[SerializeField] protected GameObject panel;
 		[SerializeField] private Image buttonImage;
 		[SerializeField] private float destPosY;
 		[SerializeField] private Color defaultColor = Color.white;

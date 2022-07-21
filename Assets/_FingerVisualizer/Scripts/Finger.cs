@@ -71,7 +71,7 @@ namespace FingerVisualizer
             
             if(curFreq > buffer)
 			{
-                buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 15f);
+                buffer = Mathf.SmoothDamp(buffer, curFreq, ref smoothVel, Time.deltaTime * 5f);
 			}
 			else
 			{

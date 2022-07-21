@@ -1,5 +1,6 @@
 ﻿using System;
 using UnityEngine;
+using UnityEngine.UI;
 
 namespace FingerVisualizer
 {
@@ -11,11 +12,13 @@ namespace FingerVisualizer
 
 		[SerializeField] private ResetButton button_ResetFreq;
 		[SerializeField] private ResetButton button_ResetIntensity;
-		
+		[SerializeField] private Slider overallIntensitySlider;
+		private float originalOverallIntensityValue;
 		public override void Init()
 		{
 			base.Init();
 
+			originalOverallIntensityValue = FindObjectOfType<FingerVisualizer>().IntensityMultiplier;
 
 			leftHandUI.Init();
 			rightHandUI.Init();
@@ -30,6 +33,14 @@ namespace FingerVisualizer
 			{
 				leftHandUI.OnClickResetIntensity();
 				rightHandUI.OnClickResetIntensity();
+
+				overallIntensitySlider.value = originalOverallIntensityValue;
+			});
+
+			overallIntensitySlider.onValueChanged.AddListener((newValue) =>
+			{
+				leftHandUI.ChangeOverallIntensity(newValue);
+				rightHandUI.ChangeOverallIntensity(newValue);
 			});
 			
 		}
