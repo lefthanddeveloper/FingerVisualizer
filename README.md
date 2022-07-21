@@ -16,11 +16,6 @@ Platform : Window
 <br/>
 <br/>
 <br/>
-## Reach me via lefthanddeveloper@gmail.com<br/>
-![contact](https://user-images.githubusercontent.com/85269091/180257367-ec96c55f-95a1-4d21-a46b-e6f58deadcf6.gif)
-<br/>
-<br/>
-<br/>
 external plugins:<br/>
 * [CSCore](https://github.com/filoe/cscore) 
 * [Stylized-Simple Hands](https://assetstore.unity.com/packages/3d/characters/stylized-simple-hands-221297)
