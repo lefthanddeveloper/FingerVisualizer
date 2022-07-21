@@ -1,11 +1,9 @@
 # FingerVisualizer - Dancing Fingers!
-## Audio Visualization with Fingers
-
-Unity Version : 2021.3.1f<br/>
-Platform : Window<br/>
-Used external plugins:<br/>
-* CSCore : https://github.com/filoe/cscore
-* Stylzed - Simple Hands : https://assetstore.unity.com/packages/3d/characters/stylized-simple-hands-221297
+Audio Visualization with Fingers
+<br/>
+Unity Version : 2021.3.1f
+<br/>
+Platform : Window
 <br/>
 <br/>
 ## Play View<br/>
@@ -20,4 +18,10 @@ Used external plugins:<br/>
 <br/>
 ## Reach me via lefthanddeveloper@gmail.com<br/>
 ![contact](https://user-images.githubusercontent.com/85269091/180257367-ec96c55f-95a1-4d21-a46b-e6f58deadcf6.gif)
+<br/>
+<br/>
+<br/>
+external plugins:<br/>
+* [CSCore](https://github.com/filoe/cscore) 
+* [Stylized-Simple Hands](https://assetstore.unity.com/packages/3d/characters/stylized-simple-hands-221297)
 
