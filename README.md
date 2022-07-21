@@ -1,5 +1,5 @@
 # FingerVisualizer
-Audio Visualization with Fingers
+Audio Visualization with Fingers - Dancing Fingers!
 
 Unity Version : 2021.3.1f
 
